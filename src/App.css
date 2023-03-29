@@ -11,3 +11,7 @@
 body {
   background-color: var(--green);
 }
+
+.sidebar {
+  background-color: white;
+}
