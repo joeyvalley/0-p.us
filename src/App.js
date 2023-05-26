@@ -1,9 +1,12 @@
 import './App.css';
-import Sidebar from './components/Sidebar'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home';
 
 function App() {
   return (
-    <Sidebar></Sidebar>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
 

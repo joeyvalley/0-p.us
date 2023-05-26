@@ -8,6 +8,9 @@ export default function Sidebar() {
     setRandImg(randImg)
   }, [])
 
+  function handleLink(URL) {
+    window.open(URL, '_blank');
+  }
 
   return (
     <div className="sidebar">
@@ -16,7 +19,7 @@ export default function Sidebar() {
       </div>
       <div className="info">
         <h1>Joseph Valle</h1>
-        <h2>I'm a software engineer and designer currently based in New York City, NY.</h2>
+        <h2>I'm a software engineer and designer currently based in New York City, hi.</h2>
         <h2><span className="h2-link">Resume</span></h2>
         <h2>Selected Projects:</h2>
         <ul>
@@ -35,7 +38,7 @@ export default function Sidebar() {
               </polygon>
             </svg>
           </li>
-          <li className="description">Desktop and mobile website for Wet, the band formerly known as the future of pop.</li>
+          <li className="description">Desktop and mobile website for Wet, the band formerly known as the future of pop. This is one of the first sites I made so be nice.</li>
           <li className="project-title">
             LESCSS&nbsp;
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="arrow-link-small" aria-hidden="true">
@@ -43,7 +46,7 @@ export default function Sidebar() {
               </polygon>
             </svg>
           </li>
-          <li className="description">Fully responsive website for the Lower East Side Cactus and Succulent Society, New York City's premiere group of xerophiles and rare plant enthusiasts.</li>
+          <li className="description">Fully responsive and certified dirt-style website for the Lower East Side Cactus and Succulent Society, New York City's premiere group of xerophiles and rare plant enthusiasts.</li>
           <li className="project-title">
             f-r0.gg&nbsp;
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="arrow-link-small" aria-hidden="true">
@@ -51,14 +54,14 @@ export default function Sidebar() {
               </polygon>
             </svg>
           </li>
-          <li className="description-bottom">Web application that generates a unique sculpture everyday.</li>
+          <li className="description-bottom">Web application that generates a unique sculpture everyday. I love <span class="footer-link" onClick={() => handleLink('https://www.midjourney.com/app/users/3e74402f-56cd-46c9-81a3-c7b99c4e85d2/')}>Midjourney</span>.</li>
         </ul>
       </div>
       <div className="sidebar-footer">
-        <span className="footer-link">Github</span>
-        <span className="footer-link">Linkedin</span>
-        <span className="footer-link">Instagram</span>
-        <span className="footer-link">Contact</span>
+        <span className="footer-link" onClick={() => handleLink('https://github.com/joeyvalley')} > Github</span>
+        <span className="footer-link" onClick={() => handleLink('https://www.linkedin.com/in/joeyvalley/')}>Linkedin</span>
+        <span className="footer-link" onClick={() => handleLink('https://www.instagram.com/joeyvalley/')}>Instagram</span>
+        <span className="footer-link" onClick={() => handleLink('mailto:josephrvalle@gmail.com')}>Contact</span>
       </div>
     </div >
   );

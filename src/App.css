@@ -54,15 +54,16 @@ body {
 
 .info {
   position: relative;
-  margin-top: 320px;
+  /* margin-top: 304px; */
   padding: 8px 16px 0px 16px;
+  /* background-color: blue; */
 }
 
 .sidebar {
   width: 320px;
   height: 100vh;
   position: fixed;
-  border-right: 1px solid var(--dark-green);
+  /* border-right: 1px solid var(--dark-green); */
   overflow: scroll;
 }
 
@@ -143,23 +144,24 @@ body {
 
 .profile-photo-container {
   width: 320px;
-  height: 320px;
-  position: fixed;
+  height: 304px;
+  /* position: fixed; */
   background: var(--green);
   padding: 0;
   margin: 0;
   z-index: 2000;
-  border-right: 1px solid var(--dark-green);
-  border-bottom: 1px solid var(--dark-green);
+  /* background: red; */
+  /* border-right: 1px solid var(--dark-green); */
+  /* border-bottom: 1px solid var(--dark-green); */
 
 }
 
 .profile-photo {
   width: 320px;
   z-index: 2000;
-  border: 1px solid var(--dark-green);
+  /* border: 1px solid var(--dark-green); */
   border-radius: 100%;
-
+  padding: 16px;
 }
 
 .sidebar-footer {
@@ -196,4 +198,32 @@ body {
 
 .h2-link:hover {
   color: var(--dark-green);
+}
+
+.content-container {
+  width: calc(100% - 320px);
+  height: 100vh;
+  position: relative;
+  left: 320px;
+  display: flex;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  padding: 24px 32px 16px 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+
+.one {
+  max-width: 100%;
+  height: auto;
+  grid-column: span 2;
+  /* Adjust the span value based on your desired grid layout */
+  /* Adjust the span value based on your desired grid layout */
 }
