@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
 export default function Sidebar() {
-  const [randImg, setRandImg] = useState(1)
+  // const [randImg, setRandImg] = useState(1)
 
-  useEffect(() => {
-    const randImg = Math.floor(Math.random() * 9) + 1;
-    setRandImg(randImg)
-  }, [])
+  // useEffect(() => {
+  //   // const randImg = Math.floor(Math.random() * 9) + 1;
+  //   setRandImg(randImg)
+  // }, [])
 
   function handleLink(URL) {
     window.open(URL, '_blank');
@@ -15,16 +15,15 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="profile-photo-container">
-        <img alt="profile" className="profile-photo" src={`./assets/img/profile/${randImg}.jpg`} />
+        <img alt="profile" className="profile-photo" src={`./assets/img/profile/7.jpg`} />
       </div>
       <div className="info">
-        <h1>Joseph Valle</h1>
-        <h2>I'm a software engineer and designer currently based in New York City, hi.</h2>
-        <h2><span className="h2-link">Resume</span></h2>
-        <h2>Selected Projects:</h2>
+        <h1>Joseph Valle (b. 1988)</h1>
+        <span className="description">Non-disciplinary artist and software engineer currently based in New York City.</span>
+        <h2>Selected Projects</h2>
         <ul>
           <li className="project-title">
-            Nonhuman Teachers&nbsp;
+            nonhumanteachers.org&nbsp;
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="arrow-link-small" aria-hidden="true" data-v-069f367b="">
               <polygon fill="currentColor" points="5 4.31 5 5.69 9.33 5.69 2.51 12.51 3.49 13.49 10.31 6.67 10.31 11 11.69 11 11.69 4.31 5 4.31">
               </polygon>
@@ -32,7 +31,7 @@ export default function Sidebar() {
           </li>
           <li className="description">React-based website for Nonhuman Teachers, an ecologically-minded non-profit group based in Los Angeles.</li>
           <li className="project-title">
-            Wet&nbsp;
+            wet.band&nbsp;
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="arrow-link-small" aria-hidden="true">
               <polygon fill="currentColor" points="5 4.31 5 5.69 9.33 5.69 2.51 12.51 3.49 13.49 10.31 6.67 10.31 11 11.69 11 11.69 4.31 5 4.31">
               </polygon>
@@ -40,7 +39,7 @@ export default function Sidebar() {
           </li>
           <li className="description">Desktop and mobile website for Wet, the band formerly known as the future of pop. This is one of the first sites I made so be nice.</li>
           <li className="project-title">
-            LESCSS&nbsp;
+            lescss.org&nbsp;
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="arrow-link-small" aria-hidden="true">
               <polygon fill="currentColor" points="5 4.31 5 5.69 9.33 5.69 2.51 12.51 3.49 13.49 10.31 6.67 10.31 11 11.69 11 11.69 4.31 5 4.31">
               </polygon>
@@ -58,9 +57,9 @@ export default function Sidebar() {
         </ul>
       </div>
       <div className="sidebar-footer">
+        <span className="footer-link" onClick={() => handleLink('')}>Resume</span>
         <span className="footer-link" onClick={() => handleLink('https://github.com/joeyvalley')} > Github</span>
         <span className="footer-link" onClick={() => handleLink('https://www.linkedin.com/in/joeyvalley/')}>Linkedin</span>
-        <span className="footer-link" onClick={() => handleLink('https://www.instagram.com/joeyvalley/')}>Instagram</span>
         <span className="footer-link" onClick={() => handleLink('mailto:josephrvalle@gmail.com')}>Contact</span>
       </div>
     </div >
