@@ -9,7 +9,7 @@ import Wet from './pages/Wet';
 function App() {
   return (
     <Routes>
-      <Route path="/projects/fr-0gg" element={<Frog />} />
+      <Route path="/projects/f-r0gg" element={<Frog />} />
       <Route path="/" element={<Home />} />
       <Route path="/projects/lescss" element={<LESCSS />} />
       <Route path="/projects/nonhuman-teachers" element={<NHT />} />

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Sidebar() {
 
   function handleLink(URL) {
@@ -15,7 +17,7 @@ export default function Sidebar() {
         <h2>Selected Projects</h2>
         <ul>
           <li className="project-title">
-            nonhumanteachers.org&nbsp;
+            <Link to="/projects/nonhuman-teachers">nonhumanteachers.org&nbsp;</Link>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="arrow-link-small" aria-hidden="true" data-v-069f367b="">
               <polygon fill="currentColor" points="5 4.31 5 5.69 9.33 5.69 2.51 12.51 3.49 13.49 10.31 6.67 10.31 11 11.69 11 11.69 4.31 5 4.31">
               </polygon>
@@ -23,7 +25,7 @@ export default function Sidebar() {
           </li>
           <li className="description">React-based website for Nonhuman Teachers, an ecologically-minded non-profit group based in Los Angeles.</li>
           <li className="project-title">
-            wet.band&nbsp;
+            <Link to="/projects/wet">wet.band&nbsp;</Link>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="arrow-link-small" aria-hidden="true">
               <polygon fill="currentColor" points="5 4.31 5 5.69 9.33 5.69 2.51 12.51 3.49 13.49 10.31 6.67 10.31 11 11.69 11 11.69 4.31 5 4.31">
               </polygon>
@@ -31,7 +33,7 @@ export default function Sidebar() {
           </li>
           <li className="description">Desktop and mobile website for Wet, the band formerly known as the future of pop. This is one of the first sites I made so be nice.</li>
           <li className="project-title">
-            lescss.org&nbsp;
+            <Link to="/projects/lescss">lescss.org&nbsp;</Link>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="arrow-link-small" aria-hidden="true">
               <polygon fill="currentColor" points="5 4.31 5 5.69 9.33 5.69 2.51 12.51 3.49 13.49 10.31 6.67 10.31 11 11.69 11 11.69 4.31 5 4.31">
               </polygon>
@@ -39,7 +41,7 @@ export default function Sidebar() {
           </li>
           <li className="description">Fully responsive and certified dirt-style website for the Lower East Side Cactus and Succulent Society, New York City's premiere group of xerophiles and rare plant enthusiasts.</li>
           <li className="project-title">
-            f-r0.gg&nbsp;
+            <Link to="/projects/f-r0gg">f-r0.gg&nbsp;</Link>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="arrow-link-small" aria-hidden="true">
               <polygon fill="currentColor" points="5 4.31 5 5.69 9.33 5.69 2.51 12.51 3.49 13.49 10.31 6.67 10.31 11 11.69 11 11.69 4.31 5 4.31">
               </polygon>
