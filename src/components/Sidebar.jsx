@@ -1,12 +1,4 @@
-import { useEffect, useState } from "react";
-
 export default function Sidebar() {
-  // const [randImg, setRandImg] = useState(1)
-
-  // useEffect(() => {
-  //   // const randImg = Math.floor(Math.random() * 9) + 1;
-  //   setRandImg(randImg)
-  // }, [])
 
   function handleLink(URL) {
     window.open(URL, '_blank');
