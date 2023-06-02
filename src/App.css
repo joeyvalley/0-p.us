@@ -10,27 +10,18 @@
   padding: 0;
 }
 
-.arrow-link {
-  width: 1em;
-  height: 1em;
-  position: absolute;
-  margin-top: 3.5px;
-  color: var(--dark-green);
-}
-
-.arrow-link-small {
-  width: 1em;
-  height: 1em;
-  position: absolute;
-  margin-top: 5.5px;
-  color: var(--dark-green);
-}
-
 @font-face {
   font-family: "Sohne";
   src: url('../public/assets/fonts/normal/test-soehne-buch.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Sohne";
+  src: url('../public/assets/fonts/normal/test-soehne-buch-kursiv.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
 }
 
 @font-face {
@@ -47,9 +38,184 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "SohneMono";
+  src: url('../public/assets/fonts/mono/test-soehne-mono-buch-kursiv.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SohneMono";
+  src: url('../public/assets/fonts/mono/test-soehne-mono-halbfett.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@keyframes colorOscillation {
+  0% {
+    color: black;
+    ;
+  }
+
+  100% {
+    color: var(--dark-green);
+    ;
+  }
+}
+
+.arrow-link {
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  margin-top: 3.5px;
+  color: var(--dark-green);
+}
+
+.arrow-link-small {
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  margin-top: 5.5px;
+  color: var(--dark-green);
+}
+
 
 body {
   background-color: var(--green);
+}
+
+.contact {
+  font-family: "Sohne";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 24px;
+  color: var(--black);
+  text-align: justify;
+}
+
+.contact-container h3 {
+  color: var(--black);
+  font-family: "Sohne";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-container a {
+  color: var(--black);
+  text-decoration: underline;
+}
+
+.contact-justify {
+  font-family: "Sohne";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 24px;
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-container {
+  padding-top: 32px;
+}
+
+.content-container {
+  width: calc(100% - 384px);
+  height: fit-content;
+  position: relative;
+  left: 384px;
+  padding: 33px 40px 16px 24px;
+  /* background: red; */
+}
+
+.description {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  margin-bottom: 16px;
+  text-align: justify;
+  cursor: default;
+  color: black;
+}
+
+.description-bottom {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  text-align: justify;
+  cursor: default;
+}
+
+.footer-link {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  transition: color ease-in-out 2s;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.footer-link:hover {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--dark-green);
+  cursor: pointer;
+  animation: colorOscillation 2s infinite alternate;
+}
+
+.h2-link {
+  color: var(--black);
+  cursor: pointer;
+  transition: color ease-in-out 200ms;
+}
+
+.h2-link:hover {
+  color: var(--dark-green);
+}
+
+.home {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.home img {
+  max-width: 100%;
+}
+
+.home img:hover {
+  cursor: pointer;
+}
+
+.home p {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  text-align: justify;
+  cursor: default;
+  color: black;
+  padding-top: 4px;
+  padding-bottom: 12px;
+}
+
+.home video:hover {
+  cursor: pointer;
+}
+
+.home video {
+  max-width: 100%;
 }
 
 .info {
@@ -57,6 +223,138 @@ body {
   margin-top: 390px;
   padding: 0px 32px 40px 32px;
 }
+
+.left,
+.right {
+  flex: 1;
+  padding-right: 16px;
+}
+
+.left>*:not(:last-child),
+.right>*:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.one {
+  max-width: 100%;
+}
+
+.profile-photo-container {
+  width: 383px;
+  height: 380px;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  background: var(--green);
+  border-bottom: 1px solid var(--dark-green);
+  z-index: 50;
+  overflow: hidden;
+}
+
+.profile-photo {
+  width: 328px;
+  margin-top: 32px;
+  margin-left: 32px;
+  padding: 0;
+  border: 1px solid var(--dark-green);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 32px;
+  scale: 2;
+  mix-blend-mode: hard-light;
+}
+
+.project-title {
+  display: inline-block;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: color ease-in-out 2s;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.project-title:hover {
+  animation: colorOscillation 2s infinite alternate;
+}
+
+.resume-container {
+  padding-top: 32px;
+  height: fit-content;
+}
+
+.resume-container a {
+  text-decoration: underline;
+  color: var(--black);
+
+}
+
+.resume-container h1 {
+  font-family: "SohneMono";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.resume-container h2 {
+  font-family: "SohneMono";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  margin: 8px 0px;
+}
+
+.resume-container h3 {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume-container h4 {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume-container p,
+li {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  text-align: justify;
+  cursor: default;
+  color: black;
+  text-align: justify;
+}
+
+.resume-container ul {
+  list-style-type: none;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.italics {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.resume-description {
+  margin-bottom: 8px;
+}
+
 
 .sidebar {
   width: 384px;
@@ -94,6 +392,21 @@ body {
   cursor: default;
 }
 
+.sidebar-footer {
+  height: 48px;
+  width: 383px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  background: var(--green);
+  border-top: 1px solid var(--dark-green);
+  /* border-right: 1px solid var(--dark-green); */
+  /* border-top-right-radius: 32px; */
+
+  padding: 16px 32px;
+}
+
 .sidebar p {
   font-family: "Sohne";
   font-weight: 400;
@@ -113,168 +426,6 @@ body {
   list-style-type: none;
 }
 
-.project-title {
-  display: inline;
-  letter-spacing: 0.3px;
-  cursor: pointer;
-  transition: color ease-in-out 2s;
-}
-
-.project-title:hover {
-  animation: colorOscillation 2s infinite alternate;
-}
-
-.project-title:hover {}
-
-@keyframes colorOscillation {
-  0% {
-    color: black;
-    ;
-  }
-
-  100% {
-    color: var(--dark-green);
-    ;
-  }
-}
-
-.description {
-  font-family: "SohneMono";
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: 0.3px;
-  margin-bottom: 16px;
-  text-align: justify;
-  cursor: default;
-  color: black;
-}
-
-.description-bottom {
-  font-family: "SohneMono";
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: 0.3px;
-  text-align: justify;
-  cursor: default;
-}
-
-.profile-photo-container {
-  width: 383px;
-  height: 380px;
-  position: fixed;
-  padding: 0;
-  margin: 0;
-  background: var(--green);
-  border-bottom: 1px solid var(--dark-green);
-  z-index: 50;
-}
-
-.profile-photo {
-  width: 328px;
-  margin-top: 32px;
-  margin-left: 32px;
-  padding: 0;
-  border: 1px solid var(--dark-green);
-  border-top-left-radius: 50%;
-  border-top-right-radius: 32px;
-}
-
-.sidebar-footer {
-  height: 48px;
-  width: 383px;
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  justify-content: space-between;
-  background: var(--green);
-  border-top: 1px solid var(--dark-green);
-  /* border-right: 1px solid var(--dark-green); */
-  /* border-top-right-radius: 32px; */
-
-  padding: 16px 32px;
-}
-
-.footer-link {
-  font-family: "SohneMono";
-  font-weight: 400;
-  font-size: 12px;
-  transition: color ease-in-out 2s;
-}
-
-.footer-link:hover {
-  font-family: "SohneMono";
-  font-weight: 400;
-  font-size: 12px;
-  color: var(--dark-green);
-  cursor: pointer;
-  animation: colorOscillation 2s infinite alternate;
-}
-
-.h2-link {
-  color: var(--black);
-  cursor: pointer;
-  transition: color ease-in-out 200ms;
-}
-
-.h2-link:hover {
-  color: var(--dark-green);
-}
-
-.content-container {
-  width: calc(100% - 384px);
-  height: fit-content;
-  position: relative;
-  left: 384px;
-  padding: 33px 40px 16px 24px;
-  /* background: red; */
-}
-
-.home {
-  width: 100%;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.one {
-  max-width: 100%;
-}
-
-.left,
-.right {
-  flex: 1;
-  padding-right: 16px;
-}
-
-.home img {
-  max-width: 100%;
-}
-
-.home img:hover {
-  cursor: pointer;
-}
-
-.home video:hover {
-  cursor: pointer;
-}
-
-
-.home p {
-  font-family: "SohneMono";
-  font-weight: 400;
-  font-size: 11px;
-  letter-spacing: 0.3px;
-  text-align: justify;
-  cursor: default;
-  color: black;
-  padding-top: 4px;
-  padding-bottom: 12px;
-}
-
-.home video {
-  max-width: 100%;
-}
-
 .title {
   float: left;
 }
@@ -282,37 +433,6 @@ body {
 .year {
   float: right;
 }
-
-
-.left>*:not(:last-child),
-.right>*:not(:last-child) {
-  margin-bottom: 12px;
-}
-
-/* .left>*:first-child video {
-  border-top-left-radius: 30%;
-}
-
-.left>*:first-child img {
-  border-top-left-radius: 30%;
-}
-
-.right>*:first-child video {
-  border-top-right-radius: 50%;
-}
-
-.right>*:first-child img {
-  border-top-right-radius: 50%;
-}
-
-
-.left>*:last-child img {
-  border-bottom-left-radius: 50%;
-}
-
-.right>*:last-child img {
-  border-bottom-right-radius: 100%;
-} */
 
 /* Scrollbar */
 ::-webkit-scrollbar {
