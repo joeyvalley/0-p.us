@@ -1,64 +1,57 @@
-import { useEffect, useState } from "react";
+import ArrowSVG from "./ArrowSVG";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
-  const [randImg, setRandImg] = useState(1)
 
-  useEffect(() => {
-    const randImg = Math.floor(Math.random() * 9) + 1;
-    setRandImg(randImg)
-  }, [])
-
+  function handleExternalLink(URL) {
+    window.open(URL);
+  }
 
   return (
     <div className="sidebar">
       <div className="profile-photo-container">
-        <img alt="profile" className="profile-photo" src={`./assets/img/profile/${randImg}.jpg`} />
+        <Link to="/">
+          <img alt="profile" className="profile-photo" src={`/assets/img/profile/7.jpg`} />
+        </Link>
       </div>
       <div className="info">
-        <h1>Joseph Valle</h1>
-        <h2>I'm a software engineer and designer currently based in New York City, NY.</h2>
-        <h2><span className="h2-link">Resume</span></h2>
-        <h2>Selected Projects:</h2>
+        <h2>Joseph Valle</h2>
+        <span className="description">Non-disciplinary software engineer currently based in New York City.</span>
+        <h2>Selected Projects</h2>
         <ul>
-          <li className="project-title">
-            Nonhuman Teachers&nbsp;
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="arrow-link-small" aria-hidden="true" data-v-069f367b="">
-              <polygon fill="currentColor" points="5 4.31 5 5.69 9.33 5.69 2.51 12.51 3.49 13.49 10.31 6.67 10.31 11 11.69 11 11.69 4.31 5 4.31">
-              </polygon>
-            </svg>
+          <li>
+            <Link to="/projects/nonhuman-teachers" className="project-title">
+              nonhumanteachers.org&nbsp;<ArrowSVG></ArrowSVG>
+            </Link>
           </li>
           <li className="description">React-based website for Nonhuman Teachers, an ecologically-minded non-profit group based in Los Angeles.</li>
-          <li className="project-title">
-            Wet&nbsp;
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="arrow-link-small" aria-hidden="true">
-              <polygon fill="currentColor" points="5 4.31 5 5.69 9.33 5.69 2.51 12.51 3.49 13.49 10.31 6.67 10.31 11 11.69 11 11.69 4.31 5 4.31">
-              </polygon>
-            </svg>
+          <li>
+            <Link to="/projects/wet" className="project-title">
+              wet.band&nbsp;<ArrowSVG></ArrowSVG>
+            </Link>
           </li>
-          <li className="description">Desktop and mobile website for Wet, the band formerly known as the future of pop.</li>
-          <li className="project-title">
-            LESCSS&nbsp;
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="arrow-link-small" aria-hidden="true">
-              <polygon fill="currentColor" points="5 4.31 5 5.69 9.33 5.69 2.51 12.51 3.49 13.49 10.31 6.67 10.31 11 11.69 11 11.69 4.31 5 4.31">
-              </polygon>
-            </svg>
+          <li className="description">Desktop and mobile website for Wet, the band formerly known as the future of pop. This is one of the first sites I made so be nice.</li>
+
+          <li>
+            <Link to="/projects/lescss" className="project-title">
+              lescss.org&nbsp;<ArrowSVG></ArrowSVG>
+            </Link>
           </li>
-          <li className="description">Fully responsive website for the Lower East Side Cactus and Succulent Society, New York City's premiere group of xerophiles and rare plant enthusiasts.</li>
-          <li className="project-title">
-            f-r0.gg&nbsp;
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="arrow-link-small" aria-hidden="true">
-              <polygon fill="currentColor" points="5 4.31 5 5.69 9.33 5.69 2.51 12.51 3.49 13.49 10.31 6.67 10.31 11 11.69 11 11.69 4.31 5 4.31">
-              </polygon>
-            </svg>
+
+          <li className="description">Fully responsive and certified dirt-style website for the Lower East Side Cactus and Succulent Society, New York City's premiere group of xerophiles and rare plant enthusiasts.</li>
+          <li>
+            <Link to="/projects/f-r0gg" className="project-title">
+              f-r0.gg&nbsp;<ArrowSVG></ArrowSVG>
+            </Link>
           </li>
-          <li className="description-bottom">Web application that generates a unique sculpture everyday.</li>
+          <li className="description-bottom">Web application that generates a unique sculpture everyday. I love <span class="footer-link" onClick={() => handleExternalLink('https://www.midjourney.com/app/users/3e74402f-56cd-46c9-81a3-c7b99c4e85d2/')}>Midjourney</span>.</li>
         </ul>
-      </div>
+      </div >
       <div className="sidebar-footer">
-        <span className="footer-link">Github</span>
-        <span className="footer-link">Linkedin</span>
-        <span className="footer-link">Instagram</span>
-        <span className="footer-link">Contact</span>
+        <Link to="/resume" className="footer-link">Resume</Link>
+        <span className="footer-link" onClick={() => handleExternalLink('https://github.com/joeyvalley')} > Github</span>
+        <span className="footer-link" onClick={() => handleExternalLink('https://www.linkedin.com/in/joeyvalley/')}>Linkedin</span>
+        <Link to="/contact" className="footer-link">Contact</Link>
       </div>
     </div >
   );
