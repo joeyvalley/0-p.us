@@ -16,7 +16,7 @@ export default function Sidebar() {
       </div>
       <div className="info">
         <h2>Joseph Valle</h2>
-        <span className="description">Interdisciplinary software engineer currently based in New York City.</span>
+        <span className="description">Non-disciplinary software engineer currently based in New York City.</span>
         <h2>Selected Projects</h2>
         <ul>
           <li>
