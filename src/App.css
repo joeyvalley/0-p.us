@@ -85,6 +85,8 @@ body {
   background-color: var(--green);
 }
 
+
+
 .contact {
   font-family: "Sohne";
   font-weight: 500;
@@ -128,11 +130,11 @@ body {
 
 .content-container {
   width: calc(100% - 384px);
+  height: -moz-fit-content;
   height: fit-content;
   position: relative;
   left: 384px;
-  padding: 33px 40px 16px 24px;
-  /* background: red; */
+  padding: 24px 24px 24px 24px;
 }
 
 .description {
@@ -159,7 +161,7 @@ body {
   font-family: "SohneMono";
   font-weight: 400;
   font-size: 12px;
-  transition: color ease-in-out 2s;
+  transition: color ease-in-out 1s;
   text-decoration: none;
   color: var(--black);
 }
@@ -174,13 +176,22 @@ body {
 }
 
 .h2-link {
+  display: block;
+  font-family: "Sohne";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23.4px;
   color: var(--black);
-  cursor: pointer;
-  transition: color ease-in-out 200ms;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  cursor: default;
+  text-decoration: none;
+  transition: color ease-in-out 1s;
 }
 
 .h2-link:hover {
   color: var(--dark-green);
+  cursor: pointer;
 }
 
 .home {
@@ -225,7 +236,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  mix-blend-mode: screen;
+  /* mix-blend-mode: screen; */
 }
 
 
@@ -274,17 +285,115 @@ body {
   mix-blend-mode: hard-light;
 }
 
+.project-container {
+  height: fit-content;
+}
+
+.project-container pre {
+  background: #2D333B;
+  width: 100%;
+  height: fit-content;
+  padding: 16px;
+  border-radius: 4px;
+  font-family: 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
+  text-align: left;
+  color: white;
+  white-space: pre-wrap;
+  /* CSS3 */
+  white-space: -moz-pre-wrap;
+  /* Firefox */
+  white-space: -pre-wrap;
+  /* Opera <7 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer */
+}
+
+.project-container code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 18px;
+  white-space: pre-line;
+}
+
+.project-container a {
+  text-decoration: underline;
+  color: var(--black);
+
+}
+
+.project-container h1 {
+  font-family: "SohneMono";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.project-container h2 {
+  font-family: "SohneMono";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  margin: 8px 0px;
+}
+
+.project-container h3 {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: left;
+}
+
+.project-container h3 span {
+  padding-right: 16px;
+}
+
+.project-container h4 {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-container p,
+li {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  cursor: default;
+  color: black;
+  text-align: justify;
+}
+
+
+.project-container ul {
+  list-style-type: none;
+}
+
+
 .project-title {
   display: inline-block;
   letter-spacing: 0.3px;
   cursor: pointer;
-  transition: color ease-in-out 2s;
+  transition: color ease-in-out 1s;
   text-decoration: none;
   color: var(--black);
 }
 
 .project-title:hover {
-  animation: colorOscillation 2s infinite alternate;
+  color: var(--dark-green);
 }
 
 .resume-container {
@@ -444,9 +553,29 @@ li {
 .video-container {
   width: calc(100% - 384px);
   height: 100dvh;
-  position: relative;
+  position: absolute;
   left: 384px;
   padding: 33px 40px 16px 24px;
+  mix-blend-mode: screen;
+}
+
+.video-overlay {
+  width: 100%;
+  min-height: fit-content;
+  max-height: calc(100dvh - 48px);
+  position: relative;
+  left: 0;
+  padding: 16px 24px 16px 8px;
+  z-index: 100;
+  background: var(--green);
+  border: 1px solid var(--dark-green);
+  opacity: 0;
+  transition: opacity ease-in-out 500ms;
+  overflow-y: scroll;
+}
+
+.video-overlay.fade-in {
+  opacity: 1;
 }
 
 .year {

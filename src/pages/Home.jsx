@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <Sidebar></Sidebar>
       <Video>
-        <video src="/assets/video/3.mp4" autoPlay={true} controls={false} muted={true} className='fullscreen'></video>
+        <video src="/assets/video/wet.mp4" autoPlay={true} loop={true} controls={false} muted={true} className='fullscreen'></video>
       </Video>
     </>
   )

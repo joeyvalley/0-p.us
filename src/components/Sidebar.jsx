@@ -15,8 +15,10 @@ export default function Sidebar() {
         </Link>
       </div>
       <div className="info">
-        <h2>Joseph Valle</h2>
-        <span className="description">Non-disciplinary software engineer currently based in New York City.</span>
+        <Link to="/" className="h2-link">
+          <span>Joseph Valle</span>
+        </Link>
+        <span className="description">Non-disciplinary software engineer currently based in New York, NY.</span>
         <h2>Selected Projects</h2>
         <ul>
           <li>
@@ -39,12 +41,12 @@ export default function Sidebar() {
           </li>
 
           <li className="description">Fully responsive and certified dirt-style website for the Lower East Side Cactus and Succulent Society, New York City's premiere group of xerophiles and rare plant enthusiasts.</li>
-          <li>
-            <Link to="/projects/f-r0gg" className="project-title">
-              f-r0.gg&nbsp;<ArrowSVG></ArrowSVG>
+          <li id="instargam">
+            <Link to="/projects/instargam" className="project-title">
+              Instargam&nbsp;<ArrowSVG></ArrowSVG>
             </Link>
           </li>
-          <li className="description-bottom">Web application that generates a unique sculpture everyday. I love <span class="footer-link" onClick={() => handleExternalLink('https://www.midjourney.com/app/users/3e74402f-56cd-46c9-81a3-c7b99c4e85d2/')}>Midjourney</span>.</li>
+          <li className="description-bottom"></li>
         </ul>
       </div >
       <div className="sidebar-footer">
