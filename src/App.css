@@ -64,6 +64,18 @@
   }
 }
 
+@keyframes sectionAnimation {
+  0% {
+    color: black;
+    ;
+  }
+
+  100% {
+    color: var(--dark-green);
+    ;
+  }
+}
+
 .arrow-link {
   width: 1em;
   height: 1em;
@@ -103,7 +115,20 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  padding-top: 8px;
+}
+
+.contact-info {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  margin-bottom: 8px;
   display: flex;
   justify-content: space-between;
 }
@@ -125,7 +150,7 @@ body {
 }
 
 .contact-container {
-  padding-top: 32px;
+  /* padding-top: 32px; */
 }
 
 .content-container {
@@ -135,6 +160,34 @@ body {
   position: relative;
   left: 384px;
   padding: 24px 24px 24px 24px;
+}
+
+.text-content-container {
+  width: calc(100% - 384px);
+  height: -moz-fit-content;
+  height: 100dvh;
+  position: relative;
+  left: 384px;
+  padding: 0px 24px 24px 24px;
+  background: var(--green);
+  margin: 0;
+  opacity: 0;
+  transition: opacity ease-in-out 500ms;
+}
+
+.fade-in {
+  opacity: 1
+}
+
+.contact-body {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  text-align: justify;
+  cursor: default;
+  color: black;
+  text-align: justify;
 }
 
 .description {
@@ -323,13 +376,26 @@ body {
 
 }
 
+.details {
+  padding-bottom: 8px;
+  /* border-bottom: 1px solid black; */
+}
+
+.date {
+  animation: sectionAnimation 2s infinite alternate;
+}
+
 .project-container h1 {
   font-family: "SohneMono";
-  font-weight: 600;
+  font-weight: 400;
   font-size: 12px;
   line-height: auto;
   color: var(--black);
   margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding-bottom: 8px;
 }
 
 .project-container h2 {
@@ -382,6 +448,10 @@ li {
   list-style-type: none;
 }
 
+.project-img {
+  width: 100%;
+}
+
 
 .project-title {
   display: inline-block;
@@ -397,7 +467,7 @@ li {
 }
 
 .resume-container {
-  padding-top: 32px;
+  padding: 32px 24px 16px 0px;
   height: fit-content;
 }
 
