@@ -27,11 +27,12 @@ export default function NHT() {
           </h1>
           <h3>
             <span><a href="https://nonhumanteachers.org" target='blank'>www.nonhumanteachers.org</a></span>
-            <span><a href="https://github.com/joeyvalley/Nonhuman-Teachers" target='blank'>Github</a></span>
+            <span><a href="https://github.com/joeyvalley/Nonhuman-Teachers" target='blank'>Github (frontend)</a></span>
+            <span><a href="https://github.com/joeyvalley/Nonhuman-Teachers-Backend" target='blank'>Github (backend)</a></span>
           </h3>
-          <p><span className='bold'>Languages and Frameworks:</span> React, Javascript, Node.js</p>
-          <p><span className='bold'>Management and Deployment:</span> Git, Github, Vercel</p>
-          <p><span className='bold'>Databases:</span> N/A</p>
+          <p><span className='bold'>Languages and Frameworks:</span> React, Javascript, Node.js,  Express, Mongoose</p>
+          <p><span className='bold'>Management and Deployment:</span> Git, Github, Glitch, Vercel</p>
+          <p><span className='bold'>Databases:</span> MongoDB</p>
           <p><span className='bold'>API:</span> Donorbox, Mailchimp, Stripe</p>
           <p>&nbsp;</p>
           <p>Nonhuman Teachers is a 501(c)(3) non-profit organization that takes a new approach to ecological storytelling, blending science, art, and the imagination to help deepen the relationship between humans and the natural world. </p>
