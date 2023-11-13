@@ -35,15 +35,19 @@ export default function NHT() {
           <p><span className='bold'>Databases:</span> MongoDB</p>
           <p><span className='bold'>API:</span> Donorbox, Mailchimp, Stripe</p>
           <p>&nbsp;</p>
-          <p>Nonhuman Teachers is a 501(c)(3) non-profit organization that takes a new approach to ecological storytelling, blending science, art, and the imagination to help deepen the relationship between humans and the natural world. </p>
+          <p><span className='bold'>Key Contributions</span></p>
+          <ul>
+            <li>&bull; Demonstrated expertise in full-stack web development, from conceptualization to deployment, using modern technologies and best practices.</li>
+            <li>&bull; Enhanced user experience and interaction with the organization's platform, leading to increased engagement and support.</li>
+            <li>&bull; Developed secure and efficient content management solutions, streamlining the organization's administrative processes.</li>
+          </ul>
           <p>&nbsp;</p>
-          <p>It has been my great pleasure to serve as the Director of Events of Nonhuman Teachers since its inception in January of 2023. I have since curated the inaugural season of <a href="https://www.eventbrite.com/manage/collections/2244719/events">fundraising programming</a> in New York's Lower East Side, graciously hosted by our friends at <a href="https://nineorchard.com">Nine Orchard</a>.</p>
+          <p><span className='bold'>Details</span></p>
+          <p>For this project, I lead the design and development of a dynamic React-based web application, capitalizing on the framework's robust component structure to craft an intuitive and user-friendly interface that serves to facilitate user engagement and learning about the Nonhuman Teachers organization. I created custom React components that enable users to interact with the organization's projects and support its mission effectively.</p>
           <p>&nbsp;</p>
-          <p>In addition to this, I have served as a designer and the principal developer for Nonhuman Teachers' website, working in collaboration with designers Carlos Morera and Miguel Gaydosh.</p>
+          <p>In addition, I engineered a resilient backend server utilizing Express, Mongoose, and MongoDB, enhancing data handling and storage capabilities. I successfully deployed the server on Glitch, ensuring smooth and reliable access for users and a cost-effective solution for the client. The server implements functionality for users to submit and access “Experience Reports”, contributing to a vital on-going publishing project the organization is engaged in.</p>
           <p>&nbsp;</p>
-          <p>The site is a React application, leveraging the component structure of the React framework to build out a simple yet functional interface for users to learn about the organization, engage with organizations many projects, and <a href="https://nonhumanteachers.org/donate">support</a> the organiztions cause.</p>
-          {/* <p>&nbsp;</p> */}
-          {/* <img src="https://www.nonhumanteachers.org/assets/images/future.jpg" alt='Nonhuman Teachers' className='project-img' /> */}
+          <p>Lastly, I developed a custom admin portal, implementing robust content moderation features, allowing for the approval or rejection of posts based on content appropriateness, thereby empowering the organization to manage new submissions efficiently and effectively.</p>
         </div>
       </div>
     </div>

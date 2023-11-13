@@ -30,16 +30,17 @@ export default function LESCSS() {
             <span><a href="https://github.com/joeyvalley/LESCSS" target='blank'>Github</a></span>
           </h3>
           <div className='details'>
-            <p><span className='bold'>Languages and Frameworks:</span> Vite, Typescript, Node.js</p>
-            <p><span className='bold'>Management and Deployment:</span> Git, Github, Vercel</p>
-            <p><span className='bold'>Databases:</span> MongoDB</p>
+            <p><span className='bold'>Languages and Frameworks:</span> Vite, Typescript, Node.js, Python, Django</p>
+            <p><span className='bold'>Management and Deployment:</span> Git, Github, Vercel, Heroku</p>
+            <p><span className='bold'>Databases:</span> PostgreSQL</p>
             <p><span className='bold'>API:</span> Mailchimp</p>
           </div>
-          <p>The Lower East Side Cactus and Succulent Society was founded in 2019 with the goal of bringing together New York City's finest xerophiles and rare plant enthusiasts.</p>
+          <p><span className='bold'>Key Contributions</span></p>
           <p>&nbsp;</p>
+          <p><span className='bold'>Details</span></p>
           <p>I designed and developed their site with the goal of highlighting the group's work in the community and maintaining an archive of the group's many meetings.</p>
           <p>&nbsp;</p>
-          <p>Recognizing the need for a streamlined yet effective solution, I strategically chose Vite as the development framework. Additionally, I integrated a MongoDB database to efficiently manage, store, and retrieve detailed records of their gatherings.</p>
+          <p>Recognizing the need for a streamlined yet effective solution, I strategically chose Vite as the development framework. Additionally, I integrated a PostgreSQL database to efficiently manage, store, and retrieve detailed records of their gatherings, creating a backend server using Python and Django to handle client-side requests.</p>
         </div>
       </div>
     </div>
