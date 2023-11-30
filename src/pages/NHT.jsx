@@ -38,8 +38,8 @@ export default function NHT() {
           <p><span className='bold'>Key Contributions</span></p>
           <ul>
             <li>&bull; Demonstrated expertise in full-stack web development, from conceptualization to deployment, using modern technologies and best practices.</li>
-            <li>&bull; Enhanced user experience and interaction with the organization's platform, leading to increased engagement and support.</li>
-            <li>&bull; Developed secure and efficient content management solutions, streamlining the organization's administrative processes.</li>
+            <li>&bull; Enhanced user experience and interaction with the organization's platform, leading to increased engagement and support, resulting in over $30,000 in donations and ticket sales for the 2023 spring/summer season.</li>
+            <li>&bull; Developed secure and efficient content management solutions, streamlining the organization's administrative processes and furthering an on-going publishing project.</li>
           </ul>
           <p>&nbsp;</p>
           <p><span className='bold'>Details</span></p>
