@@ -27,54 +27,59 @@ export default function Resume() {
           <span><a href="https://github.com/joeyvalley">Github</a></span>
           <span><a href="https://www.linkedin.com/in/joeyvalley/">Linkedin</a></span>
         </h3>
-        <p>Software developer with a multi-faceted background in creative problem solving. My diverse range of professional experience allows me to approach complex issues with a unique perspective and offer innovative approaches to traditional engineering paradigms. I am deeply passionate about bleeding-edge technologies and developing new and interesting tools for an increasingly oblique future.</p>
-
-        <h2>Skills</h2>
-        <p><span className='bold'>Languages and Frameworks:</span> JavaScript, Node.js, Express, React, Python, Flask, Django</p>
-        <p><span className='bold'>Management and Deployment:</span> Git, Github, Heroku, Shopify, Vercel</p>
-        <p><span className='bold'>Databases:</span> MongoDB, PostgreSQL, SQL</p>
-        <p><span className='bold'>Other:</span> Ableton Live Suite, Adobe Creative Suite, Arduino, Max/MSP, Touchdesigner</p>
-
-
+        <p>Multifaceted software engineer with a penchant for developing innovative approaches to traditional engineering challenges across diverse disciplines. Strong communication skills, adept at conveying complex technical concepts with diverse teams to strategize, plan, and implement creative solutions.</p>
+        {/* <br /> */}
         <h2>Selected Projects</h2>
-        <p><span className='bold'>Nonhuman Teachers</span> <a href="https://nonhumanteachers.org">www.nonhumanteachers.org</a></p>
-        <p className='resume-description'>Designed, developed and deployed a responsive web presence for Non-Human Teachers, a 501(c)(3) not-for-profit based in Los Angeles, utilizing Javascript, Node.js, Express and React.</p>
-        <p><span className='bold'>Wet </span><a href="https://wet.band">www.wet.band</a></p>
-        <p className='resume-description'>Designed, developed and deployed a responsive HTML5-enabled web presence for the band Wet, which utilizes multiple APIs to provide users with up-to-date release information and tour dates, utilizing Javascript, Node.js, Express and React.</p>
-        <p><span className='bold'>LESCSS </span><a href="https://lescss.org">www.lescss.org</a></p>
-        <p className='resume-description'>Designed, developed and deployed the website for the Lower East Side Cactus and Succulent Society, utilizing Javascript, Node.js, Express and React.</p>
-        <p><span className='bold'>f-r0.gg </span><a href="https://f-r0.gg">www.f-r0.gg</a></p>
-        <p className='resume-description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia assumenda repellat recusandae doloremque explicabo ipsam totam autem? Commodi, quis autem. Reiciendis magnam consequatur accusantium! Sapiente, id impedit! Facilis, ad eligendi.</p>
-
-
+        <h4>
+          <span>
+            <span className='bold'>Nonhuman Teachers </span>
+            <a href="https://nonhumanteachers.org">www.nonhumanteachers.org</a>
+          </span>
+          <span className='bold'>November 2023</span>
+        </h4>
+        <p className='resume-description'>&bull; developed a full-stack web application to allow for integrated fundraising, event promotion, newsletter signup, and community outreach resulting in over $30,000 in donations and ticket sales</p>
+        <p className='resume-description'>&bull; developed custom admin portal enabling the organization to pursue a new publishing venture</p>
+        <h4>
+          <span>
+            <span className='bold'>LESCSS </span>
+            <a href="https://lescss.org">www.lescss.org</a>
+          </span>
+          <span className='bold'>August 2023</span>
+        </h4>
+        <p className='resume-description'>&bull; designed and developed a full-stack web application using Typescript, Vite, Django, and PostgreSQL</p>
+        <p className='resume-description'>&bull; created a custom content-management system to allow organization members to efficiently and effectively manage meeting information and digital assets</p>
+        {/* <br /> */}
         <h2>Experience</h2>
         <h4>
           <span className='bold'>General Assembly<span className="italics"> Software Engineering Fellow</span></span>
-          <span>January 2023 - April 2023</span>
+          <span className='bold'>January 2023 - April 2023</span>
         </h4>
-        <p className='resume-description'>Immersive engineering program focused on full-stack software development. Applied best practices in testing, deployment, code maintenance, documentation, and responsive design to real-world products both individually and in small teams.</p>
+        <p className='resume-description'>&bull; completed over 480 hours of individual and collaborative software development projects</p>
+        <p className='resume-description'>&bull; built +35 web apps, programs, and websites as part of the Software Engineering Immersive program</p>
+        <h4>
+          <span className="bold">Cactus Store <span className="italics">Artistic Director</span></span>
+          <span className='bold'>June 2017 - October 2022</span>
+        </h4>
+        <p className="resume-description">&bull; designed and curated a seasonal botanical space consisting of a public greenhouse and garden, performance space, and storefront on the Lower East Side of Manhattan</p>
+        <p className='resume-description'>&bull; coordinated with award-winning artists, scientists and brands on the development of various art installations, educational workshops, public and private events, and commercial products</p>
         <h4>
           <span className='bold'>Wet <span className="italics">Artist, Producer</span></span>
-          <span>July 2012 - Present</span>
+          <span className='bold'>July 2012 - October 2022</span>
         </h4>
-        <p className='resume-description'>As a founding member of the band Wet, I have written, composed, and produced award-winning recordings for Columbia Records and AWAL, served as a creative director for press campaigns, album design, packaging and merchandise, and collaborated with a diverse network of musicians and visual artists.</p>
-
-        <h4>
-          <span className="bold">Cactus Store <span className="italics">Designer</span></span>
-          <span>June 2017 - Present</span>
-        </h4>
-        <p className="resume-description">With Cactus Store, I am responsible for planning, designing, curating and maintaining our seasonal New York location, consisting of the garden, greenhouse, performance space, and storefront at 5 Essex Street, New York, NY.</p>
+        <p className='resume-description'>&bull; composed and produced award-winning recordings for Columbia Records, Universal Music Publishing Group and AWAL, resulting in over 200 million streams and an RIAA-certified Gold record</p>
+        <p className='resume-description'>&bull; served as a creative director for album design and packaging, music videos, merchandise, and press strategy for three international album campaigns</p>
+        {/* <br /> */}
         <h2>Education</h2>
         <h4>
           <span className='bold'>General Assembly <span className="italics">Software Engineering Immersive Program</span></span>
-          <span>January 2023 - April 2023</span>
+          <span className='bold'>January 2023 - April 2023</span>
         </h4>
-        <p className='resume-description'>Certificate, Software Engineering</p>
+        <p className='resume-description'>Certificate <span className="italics">Software Engineering</span></p>
         <h4>
           <span className='bold'>New York University <span className='italics'>Gallatin School of Individualized Study</span></span>
-          <span>September 2006 - May 2010</span>
+          <span className='bold'>September 2006 - May 2010</span>
         </h4>
-        <p>Bachelor of Arts, Digital Media</p>
+        <p>Bachelor of Arts <span className='italics'>Digital Media</span></p>
 
       </div>
     </div>

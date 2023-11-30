@@ -11,7 +11,7 @@ export default function Sidebar() {
     <div className="sidebar">
       <div className="profile-photo-container">
         <Link to="/">
-          <img alt="profile" className="profile-photo" src={`/assets/img/profile/7.jpg`} />
+          <img alt="profile" className="profile-photo" src={`/assets/img/profile/4.jpg`} />
         </Link>
       </div>
       <div className="info">
@@ -26,13 +26,7 @@ export default function Sidebar() {
               nonhumanteachers.org&nbsp;<ArrowSVG></ArrowSVG>
             </Link>
           </li>
-          <li className="description">React-based website for Nonhuman Teachers, an ecologically-minded non-profit group based in Los Angeles.</li>
-          <li>
-            <Link to="/projects/wet" className="project-title">
-              wet.band&nbsp;<ArrowSVG></ArrowSVG>
-            </Link>
-          </li>
-          <li className="description">Desktop and mobile website for Wet, the band formerly known as the future of pop. This is one of the first sites I made so be nice.</li>
+          <li className="description">Web application for Nonhuman Teachers, an ecology-focused non-profit organization based in Los Angeles and New York.</li>
 
           <li>
             <Link to="/projects/lescss" className="project-title">
@@ -41,12 +35,12 @@ export default function Sidebar() {
           </li>
 
           <li className="description">Fully responsive and certified dirt-style website for the Lower East Side Cactus and Succulent Society, New York City's premiere group of xerophiles and rare plant enthusiasts.</li>
-          <li id="instargam">
-            <Link to="/projects/instargam" className="project-title">
-              Instargam&nbsp;<ArrowSVG></ArrowSVG>
+          <li>
+            <Link to="/projects/wet" className="project-title">
+              wet.band&nbsp;<ArrowSVG></ArrowSVG>
             </Link>
           </li>
-          <li className="description-bottom"></li>
+          <li className="description">Desktop and mobile website for Wet, the band formerly known as the future of pop. This is one of the first sites I made so be nice.</li>
         </ul>
       </div >
       <div className="sidebar-footer">
