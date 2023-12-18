@@ -1,33 +1,60 @@
-import './App.css';
-import { Routes, Route } from 'react-router-dom'
-
-// Import components
+import { useEffect, useState } from 'react';
 import Sidebar from './components/Sidebar';
-import Video from './components/Video';
-
-// Import pages
-import Contact from './pages/Contact';
-import Instargam from './pages/Instargam';
-import Home from './pages/Home';
-import LESCSS from './pages/LESCSS';
-import NHT from './pages/NHT';
-import Resume from './pages/Resume';
-import Wet from './pages/Wet';
+import Content from './components/Content';
+import Mobile from './components/Mobile';
+import './App.css';
 
 function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  function updateStyle() {
+    window.innerWidth <= 800 ? setIsMobile(true) : setIsMobile(false);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 1000);
+  }
+
+  useEffect(() => {
+    // Initial call when the component mounts
+    updateStyle();
+
+    // Function to handle window resize
+    function handleResize() {
+      updateStyle();
+    }
+
+    // Add the resize event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup function to remove the event listener
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); // Empty dependency array ensures this runs once on mount and on unmount
+
+
+
   return (
     <>
-      <Sidebar />
-      <Video />
-      <Routes>
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/projects/instargam" element={<Instargam />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/projects/lescss" element={<LESCSS />} />
-        <Route path="/projects/nonhuman-teachers" element={<NHT />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/projects/wet" element={<Wet />} />
-      </Routes>
+      {isLoaded ?
+        (
+          isMobile ? (
+            <div className="mobile-wrapper">
+              <Mobile />
+            </div>
+          ) : (
+            <div className="wrapper">
+              <Sidebar />
+              <Content />
+            </div>
+          )
+        )
+        :
+        (
+          <div className="loader">
+            <div className="spinner">&#9881;</div >
+          </div >
+        )
+      }
     </>
   );
 }
