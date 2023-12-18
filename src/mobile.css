@@ -1,0 +1,640 @@
+:root {
+  --green: lightgray;
+  --dark-green: darkgray;
+  --black: rgb(0, 0, 0, 100);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+body {
+  background: var(--green);
+}
+
+@font-face {
+  font-family: "Sohne";
+  src: url('../public/assets/fonts/normal/test-soehne-buch.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sohne";
+  src: url('../public/assets/fonts/normal/test-soehne-buch-kursiv.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Sohne";
+  src: url('../public/assets/fonts/normal/test-soehne-halbfett.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SohneMono";
+  src: url('../public/assets/fonts/mono/test-soehne-mono-buch.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SohneMono";
+  src: url('../public/assets/fonts/mono/test-soehne-mono-buch-kursiv.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SohneMono";
+  src: url('../public/assets/fonts/mono/test-soehne-mono-halbfett.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ALL SIDEBAR RULES */
+.mobile-header {
+  width: 100%;
+  height: 2rem;
+  border-bottom: 1px solid var(--dark-green);
+  position: fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  background: var(--green);
+  padding: 0.5rem 1rem 0.6rem 1rem;
+  z-index: 10;
+}
+
+.mobile-footer {
+  position: fixed;
+  height: 2rem;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  background: var(--green);
+  border-top: 1px solid var(--dark-green);
+  padding: 0.5rem 1rem 0.6rem 1rem;
+  z-index: 10;
+}
+
+.mobile-profile-photo-container {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  background: var(--green);
+  border-right: 1px solid var(--dark-green);
+  z-index: 10;
+}
+
+.mobile-profile-photo {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: hard-light;
+}
+
+.mobile-profile-photo:hover {
+  cursor: help;
+}
+
+.mobile-info {
+  padding: 1rem;
+  height: calc(100dvh - 3.5rem);
+  overflow-y: scroll;
+}
+
+.mobile-info ul {
+  list-style-type: none;
+
+}
+
+.mobile-my-name {
+  display: block;
+  font-family: "Sohne";
+  font-weight: 400;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+  cursor: default;
+  text-decoration: none;
+  transition: color ease-in-out 1s;
+}
+
+.mobile-my-name:hover {
+  color: var(--dark-green);
+  cursor: pointer;
+}
+
+.mobile-description {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+  line-height: 1rem;
+  text-align: justify;
+  cursor: default;
+  color: black;
+}
+
+.description-bottom {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 0.75rem;
+  /* letter-spacing: 0.3px; */
+  text-align: justify;
+  padding-bottom: 0.5rem;
+}
+
+.mobile-info h2 {
+  font-family: "Sohne";
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: var(--black);
+  margin: 0.5rem 0rem;
+  cursor: default;
+}
+
+.project-title {
+  font-size: 0.875rem;
+  display: inline-block;
+  transition: color ease-in-out 1s;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.project-title:hover {
+  color: var(--dark-green);
+  cursor: pointer;
+}
+
+.footer-link {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 0.75rem;
+  transition: color ease-in-out 1s;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.footer-link:hover {
+  color: var(--dark-green);
+  cursor: pointer;
+  animation: colorOscillation 2s infinite alternate;
+}
+
+.sidebar p {
+  font-family: "Sohne";
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 23.4px;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+
+.sidebar ul {
+  font-family: "Sohne";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: var(--black);
+  list-style-type: none;
+}
+
+.sidebar ul li.project-title {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  color: var(--black);
+  list-style-type: none;
+}
+
+/* ALL CONTENT CONTAINER RULES */
+
+.mobile-content-container {
+  position: fixed;
+  margin-top: 1.5rem;
+  width: 100%;
+  height: calc(100% - 3.5rem);
+  z-index: 5;
+  padding: 0;
+
+}
+
+.mobile-fullscreen {
+  position: fixed;
+  width: 100dvw;
+  height: 100dvh;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  mix-blend-mode: screen;
+  z-index: 1;
+}
+
+.mobile-video-overlay {
+  width: 100%;
+  height: 0;
+  z-index: 100;
+  background: var(--green);
+  transition: opacity ease-in-out 500ms;
+  overflow-y: scroll;
+  opacity: 0;
+  transition: opacity ease-in-out 500ms;
+}
+
+.mobile-video-overlay.fade-in {
+  height: 100%;
+  opacity: 1;
+}
+
+.mobile-project-container {
+  padding: 1rem;
+  height: fit-content;
+}
+
+.mobile-project-container p a {
+  font-size: 0.75rem;
+  text-decoration: underline;
+  color: blue;
+}
+
+.mobile-project-container a {
+  text-decoration: underline;
+  color: var(--black);
+
+}
+
+.details {
+  padding-bottom: 8px;
+  /* border-bottom: 1px solid black; */
+}
+
+.date {
+  animation: sectionAnimation 2s infinite alternate;
+}
+
+.mobile-project-container h1 {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: auto;
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--dark-green);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  padding-top: 1rem;
+  margin-top: -1rem;
+  background: var(--green);
+}
+
+.mobile-project-container h1 .bold {
+  font-family: "SohneMono";
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: auto;
+  color: var(--black);
+  padding-bottom: 0.5rem;
+}
+
+.mobile-project-container h2 {
+  font-family: "SohneMono";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  margin: 8px 0px;
+}
+
+.mobile-project-container h3 {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: left;
+
+}
+
+.mobile-project-container h3 span {
+  padding-right: 16px;
+}
+
+.mobile-project-container h3 span a {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: auto;
+  color: blue;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: left;
+}
+
+.mobile-project-container h4 {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-project-container p,
+li {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  cursor: default;
+  color: black;
+  text-align: left;
+}
+
+
+.mobile-project-container ul {
+  list-style-type: none;
+}
+
+.mobile-project-container ul li {
+  text-align: left;
+}
+
+.project-img {
+  width: 100%;
+}
+
+
+.project-title {
+  font-size: 0.75rem;
+  display: inline-block;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: color ease-in-out 1s;
+  text-decoration: underline;
+  color: blue;
+}
+
+.project-title:hover {
+  color: var(--dark-green);
+}
+
+.contact-info {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--dark-green);
+}
+
+.contact-info span {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.contact-info span a {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: auto;
+  color: blue;
+  margin-bottom: 8px;
+}
+
+p.contact {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+  text-align: justify;
+}
+
+p.contact span.bold {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+  text-align: justify;
+}
+
+p.contact span.bold a {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-bottom: 12px;
+  color: blue;
+}
+
+p.contact a {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-bottom: 12px;
+  color: blue;
+}
+
+.mobile-resume-container {
+  padding: 1rem;
+  height: fit-content;
+}
+
+.mobile-resume-container a {
+  text-decoration: underline;
+  color: var(--black);
+
+}
+
+.mobile-resume-container h1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-content-container h1 span {
+  font-family: "SohneMono";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.mobile-content-container h1 a {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: auto;
+  color: blue;
+  margin-bottom: 8px;
+}
+
+.mobile-resume-container h2 {
+  font-family: "SohneMono";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  color: var(--black);
+  margin: 16px 0px 0px;
+  border-bottom: 1px solid var(--dark-green);
+}
+
+.mobile-resume-container h4 {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: auto;
+  color: var(--black);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  margin: 8px 0px 4px;
+}
+
+.mobile-resume-container h4> :nth-child(2n) {
+  text-align: right;
+}
+
+.mobile-resume-container h4 span {
+  font-size: 0.75rem;
+}
+
+.mobile-resume-container h4 span a {
+  font-size: 0.75rem;
+}
+
+.mobile-resume-container p,
+li {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+  text-align: justify;
+  cursor: default;
+  color: black;
+  text-align: justify;
+}
+
+.mobile-resume-container ul {
+  list-style-type: none;
+}
+
+.mobile-resume-container h3 {
+  color: var(--black);
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--dark-green);
+  padding-top: 0.5rem;
+}
+
+.mobile-resume-container h3 span {
+  font-size: 0.75rem;
+  width: fit-content;
+}
+
+.mobile-resume-container h3 span a {
+  font-size: 0.75rem;
+}
+
+.mobile-resume-container a {
+  color: blue;
+}
+
+.bold {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.bold a {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.date {
+  animation: sectionAnimation 2s infinite alternate;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.italics {
+  font-size: inherit;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.mobile-resume-description {
+  margin-bottom: 4px;
+}
+
+/* The scrollbar itself */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--green);
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: var(--dark-green);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-green);
+}
+
+@keyframes colorOscillation {
+  0% {
+    color: black;
+    ;
+  }
+
+  100% {
+    color: var(--dark-green);
+    ;
+  }
+}
+
+@keyframes sectionAnimation {
+  0% {
+    color: black;
+    ;
+  }
+
+  100% {
+    color: var(--dark-green);
+    ;
+  }
+}
