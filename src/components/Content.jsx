@@ -6,6 +6,7 @@ import Contact from '../pages/Contact';
 import LESCSS from '../pages/LESCSS';
 import NHT from '../pages/NHT';
 import Frog from '../pages/Frog';
+import Kaur from '../pages/Kaur';
 import Resume from '../pages/Resume';
 import Home from "../pages/Home";
 
@@ -18,7 +19,7 @@ export default function Content() {
         <Route path="/projects/lescss" element={<LESCSS />} />
         <Route path="/projects/nonhuman-teachers" element={<NHT />} />
         <Route path="/projects/fr-0gg" element={<Frog />} />
-        <Route path="/projects/kaur-accounting" element={<Frog />} />
+        <Route path="/projects/kaur-accounting" element={<Kaur />} />
         <Route path="/projects/wet" element={<Frog />} />
         <Route path="/resume" element={<Resume />} />
 
