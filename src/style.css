@@ -101,7 +101,6 @@ body {
   font-size: 0.875rem;
   margin-bottom: 0.5rem;
   color: var(--black);
-  cursor: default;
   text-decoration: none;
   transition: color ease-in-out 1s;
 }
@@ -112,15 +111,10 @@ body {
   font-size: 0.875rem;
   margin-bottom: 0.5rem;
   color: var(--black);
-  cursor: default;
   text-decoration: none;
   transition: color ease-in-out 1s;
 }
 
-.my-name:hover {
-  color: var(--dark-green);
-  cursor: pointer;
-}
 
 .description {
   font-family: "SohneMono";
@@ -150,6 +144,10 @@ body {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   cursor: default;
+}
+
+.info a {
+  cursor: pointer;
 }
 
 .project-title {
@@ -239,7 +237,7 @@ body {
 
 .video-overlay {
   width: 100%;
-  height: 0;
+  height: 100%;
   z-index: 100;
   background: var(--green);
   transition: opacity ease-in-out 500ms;
@@ -289,6 +287,11 @@ body {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--dark-green);
+  position: sticky;
+  padding-top: 1rem;
+  margin-top: -2rem;
+  top: 0rem;
+  background: var(--green);
 
 }
 
@@ -313,9 +316,10 @@ body {
   font-size: 12px;
   line-height: auto;
   color: var(--black);
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   display: flex;
   justify-content: left;
+  padding-top: 1rem;
 }
 
 .project-container h3 span {
