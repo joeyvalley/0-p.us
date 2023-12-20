@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
-export default function Contact() {
+export default function Contact(props) {
   const [fadeIn, setFadeIn] = useState(false);
+  const isMobile = props.isMobile;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -14,12 +15,13 @@ export default function Contact() {
 
   return (
     <div className={`video-overlay ${fadeIn ? 'fade-in' : ''}`}>
-      <div className="project-container">
+      <div className={isMobile ? 'mobile-project-container' : 'project-container'}>
         <div className="contact-info">
-          <span className="bold">Joseph Valle</span>
+          {/* <span className="bold">Joseph Valle</span> */}
           <span >+1 (617) 816-1392</span>
           <span ><a href="mailto:info@0-p.us">info@0-p.us</a></span>
           <span ><a href="https://instagram.com/joeyvalley">@joeyvalley</a></span>
+          <span >(҂◡_◡) ᕤ</span>
         </div>
         <p className="contact">Hi, I am a <span className="bold">non-disciplinary software engineer</span> (meaning that I thrive working between the cracks of different disciplines and excel in communicating between teams) working primarily in a web-based context but often experimenting with audio, video, physical computing, and, as of late, machine learning and artificial intelligence.</p>
         <p className="contact">I am a recent graduate of <span className="bold">General Assembly's <a href="https://generalassemb.ly/education/software-engineering-immersive/new-york-city">Software Engineering Immersive</a> program</span> and an alumnus of <span className="bold">New York University's <a href="https://gallatin.nyu.edu/">Gallatin School of Individualized Study</a></span>, where my concentration was digital media.</p>

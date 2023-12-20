@@ -1,5 +1,6 @@
-import { Route, Routes } from "react-router-dom"
 import '../style.css';
+import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom"
 
 // Import pages
 import Contact from '../pages/Contact';
@@ -10,7 +11,28 @@ import Kaur from '../pages/Kaur';
 import Resume from '../pages/Resume';
 import Home from "../pages/Home";
 
+import { imagesList } from "../imagesList";
+
 export default function Content() {
+
+  const [image, setImage] = useState("1.jpg");
+
+  useEffect(() => {
+    const changeImage = () => {
+      let randImage;
+      do {
+        randImage = imagesList[Math.floor(Math.random() * (imagesList.length - 1)) + 1];
+      } while (randImage === image);
+
+      setImage(randImage);
+    };
+    const delayMin = Math.floor(Math.random() * 300);
+    const delay = Math.floor(Math.random() * 50) + delayMin;
+    const timer = setTimeout(changeImage, delay);
+
+    return () => clearTimeout(timer);
+  }, [image]);
+
   return (
     <div className="content-container">
       <Routes>
@@ -22,9 +44,10 @@ export default function Content() {
         <Route path="/projects/kaur-accounting" element={<Kaur />} />
         <Route path="/projects/wet" element={<Frog />} />
         <Route path="/resume" element={<Resume />} />
-
       </Routes>
-      {/* <video src="/assets/video/wet.mp4" autoPlay={true} controls={false} muted={true} loop={true} className='fullscreen'></video> */}
+      <div className="video-container">
+        <div></div>
+      </div>
     </div>
   )
 }

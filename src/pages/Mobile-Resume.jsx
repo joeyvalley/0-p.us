@@ -20,7 +20,7 @@ export default function Resume() {
       <div className="mobile-resume-container">
         <h1>
           <span>Joseph Valle</span>
-          <span><a href="https://google.com">PDF Version</a></span>
+          <span><a href="assets/Joseph Valle | Resume.pdf">PDF Version</a></span>
         </h1>
         <h3>
           <span><a href="mailto:info@0-p.us">info@0-p.us</a></span>

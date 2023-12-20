@@ -86,29 +86,76 @@ body {
 
 .mobile-profile-photo-container {
   position: relative;
-  width: 10rem;
-  height: 10rem;
-  background: var(--green);
-  border-right: 1px solid var(--dark-green);
-  z-index: 10;
-}
-
-.mobile-profile-photo {
-  position: absolute;
-  top: -1rem;
-  left: 0;
   width: 100%;
-  height: 100%;
+  /* height: calc(100% - 1.5rem); */
+  background: var(--green);
+  margin-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background: var(--green);
+  /* mix-blend-mode: difference; */
+  /* border: 1px solid var(--dark-green); */
+  overflow: hidden;
   object-fit: cover;
-  mix-blend-mode: hard-light;
+  text-align: center;
+  animation: gradient 60s ease infinite alternate-reverse;
+  opacity: 1;
+  transition: opacity ease-in-out 500ms;
+  z-index: 100;
 }
 
-.mobile-profile-photo:hover {
-  cursor: help;
+.hidden {
+  opacity: 0;
 }
+
+.displayed {
+  display: none;
+}
+
+.info-container {
+  opacity: 0;
+  transition: opacity ease-in-out 500ms;
+}
+
+.show {
+  opacity: 1;
+}
+
+@keyframes gradient {
+  0% {
+    background: var(--green)
+  }
+
+  50% {
+    background: rgb(218, 218, 218);
+  }
+
+  100% {
+    background: var(--green)
+  }
+}
+
+.mobile-profile-photo-container img {
+  width: 200%;
+  margin-left: -50%;
+  margin-top: -20%;
+  mix-blend-mode: darken;
+  border: 1 solid var(--dark-green);
+}
+
+.mobile-profile-photo-container img:hover {
+  cursor: pointer;
+}
+
+
 
 .mobile-info {
   padding: 1rem;
+  width: 100%;
   height: calc(100dvh - 3.5rem);
   overflow-y: scroll;
   position: fixed;
@@ -263,7 +310,7 @@ body {
 }
 
 .mobile-project-container {
-  padding: 1rem;
+  padding: 1rem 1rem 1.5rem;
   height: fit-content;
 }
 

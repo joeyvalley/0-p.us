@@ -7,12 +7,17 @@ import './App.css';
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [newVisitor, setNewVisitor] = useState(true);
 
   function updateStyle() {
     window.innerWidth <= 800 ? setIsMobile(true) : setIsMobile(false);
     setTimeout(() => {
       setIsLoaded(true);
     }, 1000);
+  }
+
+  function handleNewVisitorChange(newValue) {
+    setNewVisitor(newValue);
   }
 
   useEffect(() => {
@@ -39,7 +44,7 @@ function App() {
         (
           isMobile ? (
             <div className="mobile-wrapper">
-              <Mobile />
+              <Mobile newVisitor={newVisitor} onNewVisitorChange={handleNewVisitorChange} />
             </div>
           ) : (
             <div className="wrapper">
