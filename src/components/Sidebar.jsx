@@ -61,7 +61,7 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="profile-photo-container">
-        <img src={`/assets/img/test/${image}`} alt="Profile" className="profile-photo" onClick={() => haha()} />
+        <img src={`/assets/img/profile/${image}`} alt="Profile" className="profile-photo" onClick={() => haha()} />
       </div>
       <div className="info" style={{ height: infoHeight, overflow: 'auto', padding: '0.5rem 1rem 0rem', backgroundColor: 'lightgrey' }}>
         <Link to="/" className="my-name">
