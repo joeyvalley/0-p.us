@@ -1,12 +1,31 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import '../style.css';
+import { imagesList } from "../imagesList";
 
 
 export default function Sidebar() {
 
   const rand = Math.floor(Math.random() * 5) + 1;
   const [infoHeight, setInfoHeight] = useState('auto');
+
+  const [image, setImage] = useState("1.jpg");
+
+  useEffect(() => {
+    const changeImage = () => {
+      let randImage;
+      do {
+        randImage = imagesList[Math.floor(Math.random() * (imagesList.length - 1)) + 1];
+      } while (randImage === image);
+
+      setImage(randImage);
+    };
+    const delayMin = Math.floor(Math.random() * 300);
+    const delay = Math.floor(Math.random() * 50) + delayMin;
+    const timer = setTimeout(changeImage, delay);
+
+    return () => clearTimeout(timer);
+  }, [image]);
 
   function handleExternalLink(URL) {
     window.open(URL);
@@ -29,12 +48,22 @@ export default function Sidebar() {
     return () => window.removeEventListener('resize', updateInfoHeight);
   }, []);
 
+  function haha() {
+    const sound = new Audio("/assets/witch.wav");
+    try {
+      sound.play();
+      console.log('hahahahahahahaha');
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div className="sidebar">
       <div className="profile-photo-container">
-        <img alt="profile" className="profile-photo" src={`/assets/img/profile/${rand}.jpg`} />
+        <img src={`/assets/img/test/${image}`} alt="Profile" className="profile-photo" onClick={() => haha()} />
       </div>
-      <div className="info" style={{ height: infoHeight, overflow: 'auto', padding: '0.5rem 1rem 0rem' }}>
+      <div className="info" style={{ height: infoHeight, overflow: 'auto', padding: '0.5rem 1rem 0rem', backgroundColor: 'lightgrey' }}>
         <Link to="/" className="my-name">
           <span>Joseph Valle</span>
         </Link>
