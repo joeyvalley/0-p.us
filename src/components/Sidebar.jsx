@@ -8,8 +8,8 @@ export default function Sidebar() {
 
   const rand = Math.floor(Math.random() * 5) + 1;
   const [infoHeight, setInfoHeight] = useState('auto');
-
   const [image, setImage] = useState("1.jpg");
+  const sound = new Audio("/assets/witch.wav");
 
   useEffect(() => {
     const changeImage = () => {
@@ -49,7 +49,6 @@ export default function Sidebar() {
   }, []);
 
   function haha() {
-    const sound = new Audio("/assets/witch.wav");
     try {
       sound.play();
       console.log('hahahahahahahaha');

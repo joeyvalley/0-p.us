@@ -22,8 +22,8 @@ export default function Kaur(props) {
           <span className='date'>2023</span>
         </h1>
         <h3>
-          <span><a href="https://fr-0.gg" target='_blank'>www.kauraccounting.com</a></span>
-          <span><a href="https://github.com/joeyvalley/fr-0.gg" target='blank'>Github</a></span>
+          <span><a href="https://kauraccounting.com" target='_blank'>www.kauraccounting.com</a></span>
+          <span><a href="https://github.com/joeyvalley/Kaur-Accounting" target='blank'>Github</a></span>
         </h3>
         <p><span className='bold'>Languages and Frameworks:</span> React, Javascript, Node.js</p>
         <p><span className='bold'>Management and Deployment:</span> Git, Github, Vercel</p>

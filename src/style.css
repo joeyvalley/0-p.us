@@ -87,7 +87,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  mix-blend-mode: hard-light;
+  mix-blend-mode: darken;
   scale: 1.2;
 }
 
