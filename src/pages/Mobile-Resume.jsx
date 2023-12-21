@@ -35,7 +35,7 @@ export default function Resume() {
           <span className='bold'>Nonhuman Teachers </span>
           <span></span>
           <span><a href="https://nonhumanteachers.org">www.nonhumanteachers.org</a></span>
-          <span className='bold'>November 2023</span>
+          <span className='bold'>Nov 2023</span>
         </h4>
         <p className='resume-description'>&bull; developed a full-stack web application to allow for integrated fundraising, event promotion, newsletter signup, and community outreach resulting in over $30,000 in donations and ticket sales</p>
         <p className='resume-description'>&bull; developed custom admin portal enabling the organization to pursue a new publishing venture</p>
@@ -43,7 +43,7 @@ export default function Resume() {
           <span className='bold'>LESCSS </span>
           <span></span>
           <span><a href="https://lescss.org">www.lescss.org</a></span>
-          <span className='bold'>August 2023</span>
+          <span className='bold'>Aug 2023</span>
         </h4>
         <p className='resume-description'>&bull; designed and developed a full-stack web application using Typescript, Vite, Django, and PostgreSQL</p>
         <p className='resume-description'>&bull; created a custom content-management system to allow organization members to efficiently and effectively manage meeting information and digital assets</p>
@@ -53,7 +53,7 @@ export default function Resume() {
           <span className='bold'>General Assembly</span>
           <span>&nbsp;</span>
           <span className="italics">Software Engineering Fellow</span>
-          <span className='bold'>January 2023 - April 2023</span>
+          <span className='bold'>Jan 2023 - Apr 2023</span>
         </h4>
         <p className='resume-description'>&bull; completed over 480 hours of individual and collaborative software development projects</p>
         <p className='resume-description'>&bull; built +35 web apps, programs, and websites as part of the Software Engineering Immersive program</p>
@@ -61,7 +61,7 @@ export default function Resume() {
           <span className="bold">Cactus Store</span>
           <span></span>
           <span className="italics">Artistic Director</span>
-          <span className='bold'>June 2017 - October 2022</span>
+          <span className='bold'>Jun 2017 - Oct 2022</span>
         </h4>
         <p className="resume-description">&bull; designed and curated a seasonal botanical space consisting of a public greenhouse and garden, performance space, and storefront on the Lower East Side of Manhattan</p>
         <p className='resume-description'>&bull; coordinated with award-winning artists, scientists and brands on the development of various art installations, educational workshops, public and private events, and commercial products</p>
@@ -69,7 +69,7 @@ export default function Resume() {
           <span className='bold'>Wet</span>
           <span></span>
           <span className="italics">Artist, Producer</span>
-          <span className='bold'>July 2012 - October 2022</span>
+          <span className='bold'>Jul 2012 - Oct 2022</span>
           <span></span>
         </h4>
         <p className='resume-description'>&bull; composed and produced award-winning recordings for Columbia Records, Universal Music Publishing Group and AWAL, resulting in over 200 million streams and an RIAA-certified Gold record</p>
@@ -78,13 +78,13 @@ export default function Resume() {
         <h2>Education</h2>
         <h4>
           <span className='bold'>General Assembly</span>
-          <span className='bold'>January 2023 - April 2023</span>
+          <span className='bold'>Jan 2023 - Apr 2023</span>
           {/* <span className="italics">Software Engineering Immersive Program</span> */}
         </h4>
         <p className='resume-description'>Certificate <span className="italics">Software Engineering</span></p>
         <h4>
           <span className='bold'>New York University</span>
-          <span className='bold'>September 2006 - May 2010</span>
+          <span className='bold'>Sept 2006 - Dec 2009</span>
           {/* <span className='italics'>Gallatin School of Individualized Study</span> */}
         </h4>
         <p>Bachelor of Arts <span className='italics'>Digital Media</span></p>
