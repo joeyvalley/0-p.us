@@ -25,29 +25,30 @@ export default function Resume() {
         <h3>
           <span><a href="mailto:info@0-p.us">info@0-p.us</a></span>
           <span><Link to="/">Portfolio</Link></span>
-          <span><a href="https://github.com/joeyvalley">Github</a></span>
-          <span><a href="https://www.linkedin.com/in/joeyvalley/">Linkedin</a></span>
+          <span><a href="https://github.com/joeyvalley" target="_blank">Github</a></span>
+          <span><a href="https://www.linkedin.com/in/joeyvalley/" target="_blank">Linkedin</a></span>
         </h3>
-        <p>Multifaceted software engineer with a penchant for developing innovative approaches to traditional engineering challenges across diverse disciplines. Strong communication skills, adept at conveying complex technical concepts with diverse teams to strategize, plan, and implement creative solutions.</p>
+        <p>Multifaceted software engineer with a proficiency in developing innovative approaches to traditional engineering challenges across diverse disciplines. Strong communication skills, adept at conveying complex technical concepts with diverse teams to strategize, plan, and implement creative solutions.</p>
         {/* <br /> */}
         <h2>Selected Projects</h2>
         <h4>
+          <span className='bold'>fr-0.gg </span>
+          <span></span>
+          <span><a href="https://fr-0.gg" target="_blank">www.fr-0.gg</a></span>
+          <span className='bold'>Dec 2023</span>
+        </h4>
+        <p className='resume-description'>&bull; engineered a stand-alone Discord bot to automate the creation of AI-generated imagery with Midjourney,
+          integrating cloud storage and database management for efficient data handling and retrieval</p>
+        <p className='resume-description'>&bull; created a Raspberry Pi-based deployment with Shell scripting and cron jobs to ensure continuous,
+          autonomous operation of the bot</p>
+        <h4>
           <span className='bold'>Nonhuman Teachers </span>
           <span></span>
-          <span><a href="https://nonhumanteachers.org">www.nonhumanteachers.org</a></span>
+          <span><a href="https://nonhumanteachers.org" target="_blank">www.nonhumanteachers.org</a></span>
           <span className='bold'>Nov 2023</span>
         </h4>
         <p className='resume-description'>&bull; developed a full-stack web application to allow for integrated fundraising, event promotion, newsletter signup, and community outreach resulting in over $30,000 in donations and ticket sales</p>
         <p className='resume-description'>&bull; developed custom admin portal enabling the organization to pursue a new publishing venture</p>
-        <h4>
-          <span className='bold'>LESCSS </span>
-          <span></span>
-          <span><a href="https://lescss.org">www.lescss.org</a></span>
-          <span className='bold'>Aug 2023</span>
-        </h4>
-        <p className='resume-description'>&bull; designed and developed a full-stack web application using Typescript, Vite, Django, and PostgreSQL</p>
-        <p className='resume-description'>&bull; created a custom content-management system to allow organization members to efficiently and effectively manage meeting information and digital assets</p>
-        {/* <br /> */}
         <h2>Experience</h2>
         <h4>
           <span className='bold'>General Assembly</span>
@@ -79,15 +80,16 @@ export default function Resume() {
         <h4>
           <span className='bold'>General Assembly</span>
           <span className='bold'>Jan 2023 - Apr 2023</span>
-          {/* <span className="italics">Software Engineering Immersive Program</span> */}
         </h4>
-        <p className='resume-description'>Certificate <span className="italics">Software Engineering</span></p>
+        <p className='italics'>Software Engineering Immersive Program</p>
+        <p className='resume-description'>Certificate, Software Engineering</p>
         <h4>
           <span className='bold'>New York University</span>
           <span className='bold'>Sept 2006 - Dec 2009</span>
-          {/* <span className='italics'>Gallatin School of Individualized Study</span> */}
+
         </h4>
-        <p>Bachelor of Arts <span className='italics'>Digital Media</span></p>
+        <p className='italics'>Gallatin School of Individualized Study</p>
+        <p>Bachelor of Arts, Digital Media</p>
 
       </div>
     </div>
