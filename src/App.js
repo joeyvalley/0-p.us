@@ -9,6 +9,7 @@ function App() {
   const [isMobile, setIsMobile] = useState(false);
   const [newVisitor, setNewVisitor] = useState(true);
   const [playing, setPlaying] = useState(true);
+  console.log("fuck")
 
   function updateStyle() {
     window.innerWidth <= 800 ? setIsMobile(true) : setIsMobile(false);

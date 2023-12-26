@@ -20,16 +20,16 @@ export default function Sidebar({ onPlayingChange }) {
         <h2>Selected Projects</h2>
         <ul>
           <li>
-            <Link to="/projects/nonhuman-teachers" className="project-title" onClick={() => { onPlayingChange(false); }}>nonhumanteachers.org</Link>
+            <Link to="/projects/nonhuman-teachers" className="project-title" onClick={() => { setTimeout(() => { onPlayingChange(false) }, 1000) }}>nonhumanteachers.org</Link>
           </li>
           <li className="description">Web application for Nonhuman Teachers, an ecological non-profit organization based between Los Angeles and New York.</li>
           <li>
-            <Link to="/projects/fr-0gg" className="project-title" onClick={() => { onPlayingChange(false); }}>fr-0.gg</Link>
+            <Link to="/projects/fr-0gg" className="project-title" onClick={() => { setTimeout(() => { onPlayingChange(false) }, 1000) }}>fr-0.gg</Link>
           </li>
           <li className="description">Automated Discord bot creating a daily AI-generated frog sculpture.</li>
 
           <li>
-            <Link to="/projects/kaur-accounting" className="project-title" onClick={() => { onPlayingChange(false); }}>kauraccounting.com</Link>
+            <Link to="/projects/kaur-accounting" className="project-title" onClick={() => { setTimeout(() => { onPlayingChange(false) }, 1000) }}>kauraccounting.com</Link>
           </li>
           <li className="description">Single-page React application for Kaur Accounting, a modern accounting firm offering financial management to US-based clients.</li>
 
