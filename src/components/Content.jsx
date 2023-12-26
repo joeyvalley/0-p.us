@@ -11,27 +11,28 @@ import Kaur from '../pages/Kaur';
 import Resume from '../pages/Resume';
 import Home from "../pages/Home";
 
-import { imagesList } from "../imagesList";
+import imageList from '../fetchedData.json';
 
-export default function Content() {
+export default function Content({ isPlaying }) {
+  const resultArray = Object.keys(imageList).map(key => imageList[key].image_URL);
+  const [image, setImage] = useState(resultArray[Math.floor(Math.random() * (resultArray.length - 1)) + 1]);
 
-  const [image, setImage] = useState("1.jpg");
+  function changeImage() {
+    let randImage;
+    do {
+      randImage = resultArray[Math.floor(Math.random() * (resultArray.length - 1)) + 1];
+    } while (randImage === image);
+    setImage(randImage);
+  };
 
   useEffect(() => {
-    const changeImage = () => {
-      let randImage;
-      do {
-        randImage = imagesList[Math.floor(Math.random() * (imagesList.length - 1)) + 1];
-      } while (randImage === image);
-
-      setImage(randImage);
-    };
-    const delayMin = Math.floor(Math.random() * 300);
-    const delay = Math.floor(Math.random() * 50) + delayMin;
-    const timer = setTimeout(changeImage, delay);
-
-    return () => clearTimeout(timer);
-  }, [image]);
+    if (isPlaying) {
+      const delayMin = Math.floor(Math.random() * 300) + 50;
+      const delay = Math.floor(Math.random() * 50) + delayMin;
+      const timer = setTimeout(changeImage, delay);
+      return () => clearTimeout(timer);
+    }
+  }, [image, isPlaying]);
 
   return (
     <div className="content-container">
@@ -47,6 +48,7 @@ export default function Content() {
       </Routes>
       <div className="video-container">
         <div></div>
+        <img src={`${image}`} alt="Profile" className="fullscreen" />
       </div>
     </div>
   )
