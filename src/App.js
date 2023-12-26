@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
-import Sidebar from './components/Sidebar';
-import Content from './components/Content';
-import Mobile from './components/Mobile';
+import Sidebar from './components/Sidebar.jsx';
+import Content from './components/Content.jsx';
+import Mobile from './components/Mobile.jsx';
 import './App.css';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [newVisitor, setNewVisitor] = useState(true);
+  const [playing, setPlaying] = useState(true);
 
   function updateStyle() {
     window.innerWidth <= 800 ? setIsMobile(true) : setIsMobile(false);
@@ -20,21 +21,18 @@ function App() {
     setNewVisitor(newValue);
   }
 
-  useEffect(() => {
-    // Initial call when the component mounts
-    updateStyle();
+  function handlePlayingChange(newValue) {
+    setPlaying(newValue);
+  }
 
-    // Function to handle window resize
+  useEffect(() => {
+    updateStyle();
     function handleResize() {
       updateStyle();
     }
-
-    // Add the resize event listener
     window.addEventListener('resize', handleResize);
-
-    // Cleanup function to remove the event listener
     return () => window.removeEventListener('resize', handleResize);
-  }, []); // Empty dependency array ensures this runs once on mount and on unmount
+  }, []);
 
 
 
@@ -48,8 +46,8 @@ function App() {
             </div>
           ) : (
             <div className="wrapper">
-              <Sidebar />
-              <Content />
+              <Sidebar onPlayingChange={handlePlayingChange} />
+              <Content isPlaying={playing} />
             </div>
           )
         )

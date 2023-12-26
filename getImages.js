@@ -1,9 +1,10 @@
-const app = require('./firebase-config');
-const { getDatabase, ref, query, orderByChild, get } = require("firebase/database");
-const fs = require('fs');
-const path = require('path');
-const { exit } = require('process');
+import app from './firebase-config.js';
+import { getDatabase, ref, query, orderByChild, get } from "firebase/database";
+import fs from 'fs';
+import path from 'path';
+import process from 'process';
 
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 const outputFile = path.join(__dirname, 'src', 'fetchedData.json'); // Output JSON file
 
 const database = getDatabase(app);
@@ -23,7 +24,7 @@ async function fetchData() {
   } catch (error) {
     console.error(error);
   }
-  exit();
+  process.exit();
 };
 
 // Call the function

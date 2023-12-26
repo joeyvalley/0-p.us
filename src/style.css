@@ -64,6 +64,17 @@ body {
   overflow: hidden;
 }
 
+.sidebar span {
+  font-family: "SohneMono";
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+  text-align: justify;
+
+}
+
 .profile-photo-container {
   position: sticky;
   top: 0;
@@ -107,9 +118,9 @@ body {
 }
 
 .my-name span {
-  font-family: "Sohne";
-  font-weight: 400;
-  font-size: 0.875rem;
+  font-family: "SohneMono";
+  font-weight: 600;
+  font-size: 0.75rem;
   margin-bottom: 0.5rem;
   color: var(--black);
   text-decoration: none;
@@ -137,10 +148,17 @@ body {
   padding-bottom: 0.5rem;
 }
 
+.info {
+  padding: 0.75rem 1rem 0rem;
+  background: var(--green);
+  width: 100%;
+  height: calc(100dvh - 4rem);
+}
+
 .info h2 {
-  font-family: "Sohne";
-  font-weight: 400;
-  font-size: 0.875rem;
+  font-family: "SohneMono";
+  font-weight: 600;
+  font-size: 0.75rem;
   color: var(--black);
   margin-top: 1rem;
   margin-bottom: 0.5rem;
@@ -164,16 +182,29 @@ body {
   cursor: pointer;
 }
 
+.sidebar-header {
+  position: sticky;
+  height: 2.5rem;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background: var(--green);
+  border-bottom: 1px solid var(--dark-green);
+  padding: 0.75rem 1rem 0.7rem 1rem;
+  z-index: 10
+}
+
 .sidebar-footer {
   position: sticky;
-  height: 2rem;
+  height: 2.5rem;
   width: 100%;
   bottom: 0;
   display: flex;
   justify-content: space-between;
   background: var(--green);
   border-top: 1px solid var(--dark-green);
-  padding: 0.5rem 1rem 0.6rem 1rem;
+  padding: 0.7rem 1rem 0.75rem 1rem;
   z-index: 10;
 }
 
@@ -260,7 +291,8 @@ body {
   object-fit: cover;
   top: 0;
   left: 0;
-  mix-blend-mode: color-burn;
+  mix-blend-mode: darken;
+  scale: 1.5;
 }
 
 .video-overlay {
@@ -483,7 +515,7 @@ p.contact a {
 
 .resume-container a {
   text-decoration: underline;
-  color: var(--black);
+  color: blue;
 
 }
 
