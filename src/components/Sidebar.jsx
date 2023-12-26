@@ -17,6 +17,7 @@ export default function Sidebar() {
       do {
         randImage = imagesList[Math.floor(Math.random() * (imagesList.length - 1)) + 1];
       } while (randImage === image);
+      console.log(randImage);
 
       setImage(randImage);
     };
