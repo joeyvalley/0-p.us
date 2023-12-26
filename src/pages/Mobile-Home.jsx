@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { imagesList } from "../imagesList";
+import imageList from '../fetchedData.json';
 
 export default function Home({ newVisitor, onNewVisitorChange }) {
-
-
   const [fadeIn, setFadeIn] = useState(false);
-  const [image, setImage] = useState("1.jpg");
   const [hide, setHide] = useState(false);
   const [display, setDisplay] = useState(true);
+  const resultArray = Object.keys(imageList).map(key => imageList[key].image_URL);
+  const [image, setImage] = useState(resultArray[Math.floor(Math.random() * (resultArray.length - 1)) + 1]);
 
   useEffect(() => {
     console.log(newVisitor);
@@ -20,22 +19,18 @@ export default function Home({ newVisitor, onNewVisitorChange }) {
     };
   }, []);
 
+  function changeImage() {
+    let randImage;
+    do {
+      randImage = resultArray[Math.floor(Math.random() * (resultArray.length - 1)) + 1];
+    } while (randImage === image);
+    setImage(randImage);
+  };
+
   useEffect(() => {
-    const changeImage = () => {
-      let randImage;
-      do {
-        randImage = imagesList[Math.floor(Math.random() * (imagesList.length - 1)) + 1];
-      } while (randImage === image);
-
-      setImage(randImage);
-    };
-    const delayMin = Math.floor(Math.random() * 250);
-    let delay = Math.floor(Math.random() * 50) + delayMin;
-    if (delay > 290) {
-      delay += 1000;
-    }
+    const delayMin = Math.floor(Math.random() * 300) + 50;
+    const delay = Math.floor(Math.random() * 50) + delayMin;
     const timer = setTimeout(changeImage, delay);
-
     return () => clearTimeout(timer);
   }, [image]);
 
@@ -58,7 +53,7 @@ export default function Home({ newVisitor, onNewVisitorChange }) {
   return (
     <div className={`video-overlay ${fadeIn ? 'fade-in' : ''}`}>
       <div className={newVisitor ? "mobile-profile-photo-container" : "mobile-profile-photo-container hidden displayed"}>
-        <img src={`/assets/img/profile/${image}`} alt="Profile" onClick={() => { handleNewVistorClick(); haha(); }} />
+        <img src={image} alt="Profile" onClick={() => { handleNewVistorClick(); haha(); }} />
       </div>
 
       <div className="mobile-info">

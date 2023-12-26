@@ -36,7 +36,6 @@ export default function Mobile({ newVisitor, onNewVisitorChange }) {
           <Route path="/projects/nonhuman-teachers" element={<NHT isMobile={mobile} />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
-
         </Routes>
       </div>
       <div className="mobile-footer">
