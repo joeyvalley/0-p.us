@@ -30,6 +30,18 @@ export default function Resume() {
         <p>Multifaceted software engineer with a penchant for developing innovative approaches to traditional engineering challenges across diverse disciplines. Strong communication skills, adept at conveying complex technical concepts with diverse teams to strategize, plan, and implement creative solutions.</p>
         {/* <br /> */}
         <h2>Selected Projects</h2>
+        <div>
+          <h4>
+            <span>
+              <span className='bold'>fr-0.gg </span>
+              <a href="https://fr-0.gg">www.fr-0.gg</a>
+            </span>
+            <span className='bold'>December 2023</span>
+          </h4>
+          <p className='resume-description'>&bull; engineered a stand-alone Discord bot to automate the creation of AI-generated imagery with Midjourney, integrating cloud storage and database management for efficient data handling and retrieval</p>
+          <p className='resume-description'>&bull; created a Raspberry Pi-based deployment with Shell scripting and cron jobs to ensure continuous,
+            autonomous operation of the bot</p>
+        </div>
         <h4>
           <span>
             <span className='bold'>Nonhuman Teachers </span>
@@ -39,15 +51,6 @@ export default function Resume() {
         </h4>
         <p className='resume-description'>&bull; developed a full-stack web application to allow for integrated fundraising, event promotion, newsletter signup, and community outreach resulting in over $30,000 in donations and ticket sales</p>
         <p className='resume-description'>&bull; developed custom admin portal enabling the organization to pursue a new publishing venture</p>
-        <h4>
-          <span>
-            <span className='bold'>LESCSS </span>
-            <a href="https://lescss.org">www.lescss.org</a>
-          </span>
-          <span className='bold'>August 2023</span>
-        </h4>
-        <p className='resume-description'>&bull; designed and developed a full-stack web application using Typescript, Vite, Django, and PostgreSQL</p>
-        <p className='resume-description'>&bull; created a custom content-management system to allow organization members to efficiently and effectively manage meeting information and digital assets</p>
         {/* <br /> */}
         <h2>Experience</h2>
         <h4>
