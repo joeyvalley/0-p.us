@@ -47,7 +47,7 @@ function App() {
             </div>
           ) : (
             <div className="wrapper">
-              <Sidebar onPlayingChange={handlePlayingChange} />
+              {/* <Sidebar onPlayingChange={handlePlayingChange} /> */}
               <Content isPlaying={playing} />
             </div>
           )
