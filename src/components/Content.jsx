@@ -12,6 +12,7 @@ import Resume from '../pages/Resume';
 import Home from "../pages/Home";
 
 import imageList from '../fetchedData.json';
+console.log(imageList);
 
 export default function Content({ isPlaying }) {
   const resultArray = Object.keys(imageList).map(key => imageList[key].image_URL);
@@ -27,12 +28,13 @@ export default function Content({ isPlaying }) {
 
   useEffect(() => {
     if (isPlaying) {
-      const delayMin = Math.floor(Math.random() * 300) + 50;
+      const delayMin = Math.floor(Math.random() * 450) + 50;
       const delay = Math.floor(Math.random() * 50) + delayMin;
       const timer = setTimeout(changeImage, delay);
       return () => clearTimeout(timer);
     }
   }, [image, isPlaying]);
+
 
   return (
     <div className="content-container">
